@@ -40,7 +40,7 @@ DBI1070I  Program dascrt completed successfully.
 ```
 su dasusr1  
 db2admin start
-SQL4409W The DB2 Administration Server is already active. 
+SQL4409W The DB2 Administration Server is already active.
 ```
 
 ### 下面列举了一些用于管理DAS服务的命令：
@@ -53,3 +53,12 @@ SQL4409W The DB2 Administration Server is already active.
 - DB2 GET ADMIN CFG：用于显示DAS的数据库管理器配置
 - DB2 UPDATE ADMINCFG：用于更改DAS的数据库管理器配置文件的参数（需要执行DB2ADMINSTOP和DB2ADMINSTART命令之后才能生效）
 - DB2 RESET ADMIN CFG：用于将DAS的配置参数设置为默认值（需要执行DB2ADMINSTOP和DB2ADMINSTART命令之后才能生效）
+
+## 函数
+```sql
+-- 获取月初日期
+CONCAT(LEFT(VARCHAR_FORMAT(CURRENT DATE,'yyyy-mm-dd'),8),'01')
+-- 获取下个月月初日期
+CONCAT(LEFT(VARCHAR_FORMAT(CURRENT DATE+ 1 MONTHS,'yyyy-mm-dd'),8),'01')
+-- CURRENT DATE获取的日期在不同的db2里格式可能不一致，需要格式化一下统一格式
+```
