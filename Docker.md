@@ -34,7 +34,7 @@ docker run --name some-redis -d hub.c.163.com/library/redis
 --rm                                    Automatically remove the container when it exits
 
 
-docker run -it --link some-redis:hub.c.163.com/library/redis --rm hub.c.163.com/library/redis redis-cli -h redis -p 6379
+docker run -it --link some-redis:redis --rm hub.c.163.com/library/redis redis-cli -h redis -p 6379
 
 ### CentOS7安装Docker
 
