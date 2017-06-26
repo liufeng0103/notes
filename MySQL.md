@@ -3,6 +3,8 @@ CentOS7下MySQL的安装和使用，这篇文档是在管理[http://www.bnade.co
 
 MySQL中数据文件本身是一棵B+Tree，特别是对于InnoDB的数据文件本身就是索引文件，在物理上按照主键大小顺序存储
 
+[MySql5.7 InnoDB全文索引（针对中文搜索）](http://blog.csdn.net/qq_33663251/article/details/69612619?utm_source=itdadao&utm_medium=referral)
+
 ## MariaDB
 MariaDB是MySQL的一个分支，CentOS7开始用MariaDB代替了MySQL数据库。
 
