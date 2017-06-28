@@ -4,6 +4,8 @@ CentOS7下MySQL的安装和使用，这篇文档是在管理[http://www.bnade.co
 MySQL中数据文件本身是一棵B+Tree，特别是对于InnoDB的数据文件本身就是索引文件，在物理上按照主键大小顺序存储
 
 [MySql5.7 InnoDB全文索引（针对中文搜索）](http://blog.csdn.net/qq_33663251/article/details/69612619?utm_source=itdadao&utm_medium=referral)
+[Windows下Mysql数据库服务的关闭和重启](http://blog.csdn.net/rickypc/article/details/4963025)
+windows解压后复制my-default.ini为my.ini,配置basedir和datadir，my.ini为英文编码 重启后将使用my.ini配置
 
 ## MariaDB
 MariaDB是MySQL的一个分支，CentOS7开始用MariaDB代替了MySQL数据库。
@@ -38,6 +40,7 @@ MariaDB是MySQL的一个分支，CentOS7开始用MariaDB代替了MySQL数据库�
 * usr/bin/mysql：mysql的运行路径
 * var/lib/mysql：mysql数据库文件的存放路径
 * usr/lib/mysql：mysql的安装路径
+配置文件路径 /etc/my.cnf
 
 ### 共享表空间和独立表空间之间的转换
 1. 查看当前数据库的表空间管理类型，ON代表独立表空间管理，OFF代表共享表空间管理  
