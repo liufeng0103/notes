@@ -54,3 +54,7 @@ mvn clean package -Dmaven.test.skip=true
 [spring-data-jpa 多条件查询 学习记录](http://blog.csdn.net/lsk12162012/article/details/50442792)
 [修改DbUtils支持表名下划线映射(驼峰模式)](https://my.oschina.net/quttap/blog/283199)
 [Spring Cloud构建微服务架构（一）服务注册与发现](http://blog.didispace.com/springcloud1/)
+
+(\w+)
+$1
+Atom正则表达式替换
