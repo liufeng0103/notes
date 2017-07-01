@@ -1,6 +1,8 @@
 # [Docker](https://www.docker.com)
 
 [第一个docker化的java应用](http://www.imooc.com/learn/824)
+[docker常用管理命令](http://seanlook.com/2014/10/31/docker-command-best-use-1/)
+[MySQL 官方Docker镜像的使用](https://itbilu.com/linux/docker/EyP7QP86M.html)
 
 2014发布Docker 1.0
 
@@ -25,3 +27,25 @@ c.163.com
 
 docker version
 service docker start 启动服务
+
+查看docker进程
+docker ps
+
+启动关闭容器
+docker start/stop <container id>
+
+删除容器
+docker rm <container id>
+
+修改image名
+docker tag imageid name:tag
+
+## MySQL
+简单启动MySQL实例
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+
+This image can also be used as a client for non-Docker or remote MySQL instances:
+docker run -it --rm mysql mysql -hlocalhost -uroot -p
+
+The following command line will give you a bash shell inside your mysql container
+docker exec -it mysql bash

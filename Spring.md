@@ -3,6 +3,13 @@
 
 ## 文章
 [跟开涛学SpringMVC](http://jinnianshilongnian.iteye.com/category/231099)
+[Thymeleaf 模板的使用](http://www.jianshu.com/p/ed9d47f92e37)
+[Spring Cloud构建微服务架构（一）服务注册与发现](http://blog.didispace.com/springcloud1/)
+[spring-data-jpa 多条件查询 学习记录](http://blog.csdn.net/lsk12162012/article/details/50442792)
+[怎么在Spring Controller里面返回404](http://jaskey.github.io/blog/2014/09/27/how-to-return-404-in-spring-controller/)
+[web.xml中出现<servlet-name>default</servlet-name>是什么意思](http://blog.csdn.net/hello5orld/article/details/9407905)
+
+spring只对RuntimeException进行事务回滚
 
 ## 配置文件
 ```xml
@@ -29,6 +36,14 @@ ApplicationContext context = new FileSystemXmlApplicationContext("WebContent/WEB
 File cfgFile = ResourceUtils.getFile("classpath:test.txt");
 Resource fileRource = new ClassPathResource("test.txt");  
 ```
+
+## SpringBoot
+ctrl+shift+f9 编译 热更新thymeleaf模板
+
+启动
+1. 通过main启动
+2. mvn spring-boot:run
+3. java -jar xxx.jar --spring.profiles.active=prod
 
 ## SpringMVC
 
