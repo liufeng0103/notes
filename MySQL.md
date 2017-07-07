@@ -1,40 +1,90 @@
 # MySQL使用
-CentOS7下MySQL的安装和使用，这篇文档是在管理[http://www.bnade.com](http://www.bnade.com)网站MySQL数据库的记录，方便日后查看。
 
 MySQL中数据文件本身是一棵B+Tree，特别是对于InnoDB的数据文件本身就是索引文件，在物理上按照主键大小顺序存储
 
-[MySql5.7 InnoDB全文索引（针对中文搜索）](http://blog.csdn.net/qq_33663251/article/details/69612619?utm_source=itdadao&utm_medium=referral)
-[Windows下Mysql数据库服务的关闭和重启](http://blog.csdn.net/rickypc/article/details/4963025)
+- [MySql5.7 InnoDB全文索引（针对中文搜索）](http://blog.csdn.net/qq_33663251/article/details/69612619?utm_source=itdadao&utm_medium=referral)
+- [Windows下Mysql数据库服务的关闭和重启](http://blog.csdn.net/rickypc/article/details/4963025)
+
 windows解压后复制my-default.ini为my.ini,配置basedir和datadir，my.ini为英文编码 重启后将使用my.ini配置
+
+## 安装
+### CentOS7 yum安装MySQL
+参考[官网教程](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/)
+1. 下载MySQL yum repository包  
+`wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm`
+2. 安装下载的包，把MySQL yum repository添加到系统repository列表  
+`sudo rpm -Uvh mysql57-community-release-el7-11.noarch.rpm`
+3. 安装MySQL,默认安装最新的，如果想选择版本安装，参考官网教程  
+`sudo yum install mysql-community-server`
+4. 开始MySQL  
+启动MySQL  
+`sudo service mysqld start`  
+`sudo systemctl start mysqld.service`  
+`sudo systemctl restart mysqld.service`  
+查看MySQL server状态  
+`sudo service mysqld status`  
+`sudo systemctl status mysqld.service`  
+MySQL服务器初始化（仅适用于MySQL 5.7）：在服务器初始启动时，如果服务器的数据目录为空，则会发生以下情况:  
+server被初始化  
+在data目录产生SSL证书和key文件  
+validate_password插件被安装并启用  
+超级用户'root'@'localhost'被创建。通过以下命令获取生成root的临时密码:  
+`sudo grep 'temporary password' /var/log/mysqld.log`  
+尽快修改这个临时的root账号密码  
+`mysql -uroot -p`  
+`ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';`  
+说明:  
+MySQL的validate_password插件被默认安装，它将验证新密码需要至少一个大写，一个小写，一个数字，一个特殊字符，密码长度不低于8位的密码
+5. 更新MySQL  
+对于没有启用dnf-enabled的server，使用以下命令更新所有组件:    
+`sudo yum update mysql-server`  
+对于启用dnf-enabled的系统:  
+`sudo dnf --refresh upgrade mysql-server`
+
+### windows安装
+1. 将下载下来的mysql解压到指定目录下(如:d:\mysql)
+2. 安装服务，在命令行输入：
+```
+d:\mysql\bin\mysqld -install
+启动服务
+net start mysql
+```
+3. 卸载服务，在命令行输入：
+```
+net stop mysql
+d:\mysql\bin\mysqld -remove
+# 删除服务
+sc delete MySQL
+```
 
 ## MariaDB
 MariaDB是MySQL的一个分支，CentOS7开始用MariaDB代替了MySQL数据库。
 
 ### 安装MariaDB
 1. 安装MariaDB  
-```yum -y install mariadb mariadb-server```
+`yum -y install mariadb mariadb-server`
 2. 启动MariaDB  
-```systemctl start mariadb```
+`systemctl start mariadb`
 3. 停止MariaDB  
-```systemctl stop mariadb```
+`systemctl stop mariadb`
 4. 重启MariaDB  
-```systemctl restart mariadb```
+`systemctl restart mariadb`
 5. 设置开机启动  
-```systemctl enable mariadb```
+`systemctl enable mariadb`
 6. 安装启动后输入以下命令将引导设置root密码  
-```mysql_secure_installation```
+`mysql_secure_installation`
 
-### 创建DB用户
+## 创建DB用户
 1. 创建用户bnade,密码xxxx,%表示在任何情况下可以连接  
-```CREATE USER 'bnade'@'%' IDENTIFIED BY 'xxxx';```
+`CREATE USER 'bnade'@'%' IDENTIFIED BY 'xxxx';`
 2. 查看用户权限  
-```show grants for bnade;```
+`show grants for bnade;`
 3. 给用户授权wow数据库下的表的权限  
-```GRANT all ON wow.* TO 'bnade'@'%';```  
-```GRANT select ON wow.* TO 'tomcat'@'%';```  
-```GRANT insert ON wow.mt_item TO 'tomcat'@'%';```
+`GRANT all ON wow.* TO 'bnade'@'%';`  
+`GRANT select ON wow.* TO 'tomcat'@'%';`  
+`GRANT insert ON wow.mt_item TO 'tomcat'@'%';`
 4. 回收权限,如果权限不存在会报错  
-```revoke  select on wow.*  from  bnade;```  
+`revoke  select on wow.*  from  bnade;`
 
 ### MariaDB目录
 * usr/bin/mysql：mysql的运行路径

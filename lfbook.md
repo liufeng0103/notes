@@ -31,9 +31,16 @@ mvn clean package -Dmaven.test.skip=true
 [Restful API 的设计规范](http://novoland.github.io/%E8%AE%BE%E8%AE%A1/2015/08/17/Restful%20API%20%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83.html)
 
 
+VirtualBox桥接模式无法获取ip问题解决
+使用ifconfig发现可以查看到桥接网卡enp03s,但未分配ip
+使用命令ifup enp03s 后发现成功获取ip
 
+groups
+groupadd docker
+gpasswd -a ${USER} docker
 
-
-
-
+## 网站优化
+- DNS优化
+查看浏览器的DNS lookup，发现有的时候DNS解析需要花费好几秒的时间，DNS优化还是很有必要的，考虑好一点的DNS解析服务
+屌丝只能用免费的了， 之前用万网的DNS解析，现在切换到CloudXNS看下效果怎么样
 
