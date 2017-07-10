@@ -1,4 +1,7 @@
-## DB2
+# DB2
+
+[SQL 数据复制过程中控制表运行状况分析](http://tech.cncms.com/shujuku/db2/14003.html)
+
 ### 常用
 - 查看实例 db2ilist
 - 查看当前实例 db2 get instance
