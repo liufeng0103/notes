@@ -48,3 +48,5 @@ gpasswd -a ${USER} docker
 $1
 Atom正则表达式替换
 
+
+[jquery ajax在跨域访问post请求的时候，ie9以下无效（包括ie9）](http://www.cnblogs.com/cxf520/p/5777119.html)

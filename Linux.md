@@ -33,3 +33,6 @@ iptables -I INPUT -s 127.0.0.1 -p tcp --dport 8080 -j ACCEPT
 1. 使用root账户使用以下命令为sudoers添加写权限 chmod u+w /etc/sudoers
 2. 添加 <user> ALL=(ALL) ALL
 3. 去掉文件写权限 chmod u-w /etc/sudoers
+
+sudo service mysqld start
+sudo systemctl start mysqld.service

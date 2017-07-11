@@ -6,6 +6,9 @@ counter.incrementAndGet()
 ## Quartz
 Java定时任务调度工具
 
+- [Java使用quartz实现作业调度](http://qiaowei.xyz/2016/05/11/Java%E4%BD%BF%E7%94%A8quartz%E5%AE%9E%E7%8E%B0%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6/)
+- [Quartz-Cron Expression 使用介绍](https://my.oschina.net/u/1042053/blog/136090)
+
 组成
 - Job 实现业务逻辑的任务，参数JobExecutionContext，可以用来获取Quartz运行Job的环境信息， JobDataMap可以传入参数到Job
 
@@ -29,6 +32,10 @@ Java定时任务调度工具
 4. 创建Scheduler
 
 ## Redis
+
+后台运行，修改配置文件设置daemonize为yes
+daemonize yes
+
 为什么需要NoSQL
 - High performance
 - Huge Storage

@@ -2,12 +2,13 @@
 [spring.io](http://spring.io/)
 
 ## 文章
-[跟开涛学SpringMVC](http://jinnianshilongnian.iteye.com/category/231099)
-[Thymeleaf 模板的使用](http://www.jianshu.com/p/ed9d47f92e37)
-[Spring Cloud构建微服务架构（一）服务注册与发现](http://blog.didispace.com/springcloud1/)
-[spring-data-jpa 多条件查询 学习记录](http://blog.csdn.net/lsk12162012/article/details/50442792)
-[怎么在Spring Controller里面返回404](http://jaskey.github.io/blog/2014/09/27/how-to-return-404-in-spring-controller/)
-[web.xml中出现<servlet-name>default</servlet-name>是什么意思](http://blog.csdn.net/hello5orld/article/details/9407905)
+- [跟开涛学SpringMVC](http://jinnianshilongnian.iteye.com/category/231099)
+- [Thymeleaf 模板的使用](http://www.jianshu.com/p/ed9d47f92e37)
+- [Spring Cloud构建微服务架构（一）服务注册与发现](http://blog.didispace.com/springcloud1/)
+- [spring-data-jpa 多条件查询 学习记录](http://blog.csdn.net/lsk12162012/article/details/50442792)
+- [怎么在Spring Controller里面返回404](http://jaskey.github.io/blog/2014/09/27/how-to-return-404-in-spring-controller/)
+- [web.xml中出现<servlet-name>default</servlet-name>是什么意思](http://blog.csdn.net/hello5orld/article/details/9407905)
+- [Spring Boot中使用Redis数据库](http://blog.didispace.com/springbootredis/)
 
 spring只对RuntimeException进行事务回滚
 

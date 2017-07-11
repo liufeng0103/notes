@@ -6,6 +6,12 @@
 - [在windows10里使用docker](http://www.59m59s.com/blog/zai-windows10li-shi-yong-docker/)
 - [Docker学习笔记（容器篇）](http://www.jianshu.com/p/8b46e98e596c)
 
+## 仓库
+负责分发镜像
+hub.docker.com 速度慢  
+c.163.com  
+http://hub.daocloud.io/  
+
 2014发布Docker 1.0
 
 LXC Linux支持的轻量级的容器虚拟化技术
@@ -60,10 +66,7 @@ bcdedit /set {508730cd-5f3d-11e7-9ff3-bc5ff47729fc} hypervisorlaunchtype OFF
 - Docker镜像
 联合文件系统unfs
 
-- 仓库
-负责分发镜像
-hub.docker.com 速度慢
-c.163.com
+
 
 自己搭建仓库
 
@@ -110,3 +113,6 @@ docker exec -it bnade-mysql bash
 
 docker run --network=vps --ip=10.1.1.2 --name mysql -v /dockers/mysql/data:/var/lib/mysql -v /dockers/mysql/conf:/etc/mysql -e MYSQL_ROOT_PASSWORD=123456 -d --restart always mysql
 ```
+
+## Redis
+docker runs -p 6379:6379 --name some-redis -d redis
