@@ -94,12 +94,12 @@ MariaDB是MySQL的一个分支，CentOS7开始用MariaDB代替了MySQL数据库�
 
 ### 共享表空间和独立表空间之间的转换
 1. 查看当前数据库的表空间管理类型，ON代表独立表空间管理，OFF代表共享表空间管理  
-``` show variables like "innodb_file_per_table";```
+`show variables like "innodb_file_per_table";`
 2. 修改数据库的表空间管理方式，修改innodb_file_per_table的参数值即可，但是修改不能影响之前已经使用过的共享表空间和独立表空间  
 innodb_file_per_table=1 为使用独占表空间  
 innodb_file_per_table=0 为使用共享表空间
 3. 共享表空间转化为独立表空间的方法（参数innodb_file_per_table=1需要设置）单个表的转换操作  
-```alter table table_name engine=innodb;```
+`alter table table_name engine=innodb;`
 
 ### 修改内存表的最大内存大小
 MEMORY表最大值受系统变量 max_heap_table_size 限制，默认为16MB，要改变MEMORY表大小限制，需要改变max_heap_table_size 的值。该值在 CREATE TABLE 时生效并伴随表的生命周期，(当你使用 ALTER TABLE 或 TRUNCATE TABLE命令时，表的最大限制将改变，或重启MYSQL服务时, 所有已存在的MEMORY表的最大限制将使用max_heap_table_size 的值重置
@@ -107,10 +107,10 @@ MEMORY表最大值受系统变量 max_heap_table_size 限制，默认为16MB，�
 系统变量 max_heap_table_size 用于设置内存表的大小上限。要控制单个表的最大值，需要在创建表之前设置会话变量。(不要设置全局max_heap_table_size 的值，除非你打算所有客户端创建的内存表都使用这个值)
 
 下面的例子创建了两张内存表，它们的大小限制分别为 1MB 和 2MB  
-```SET max_heap_table_size = 1024*1024;```  
-```CREATE TABLE t1 (id INT, UNIQUE(id)) ENGINE = MEMORY;```  
-```SET max_heap_table_size = 1024*1024*2;```  
-```CREATE TABLE t2 (id INT, UNIQUE(id)) ENGINE = MEMORY;```  
+`SET max_heap_table_size = 1024*1024;`
+`CREATE TABLE t1 (id INT, UNIQUE(id)) ENGINE = MEMORY;`
+`SET max_heap_table_size = 1024*1024*2;`
+`CREATE TABLE t2 (id INT, UNIQUE(id)) ENGINE = MEMORY;`
 查看max_heap_table_size  
 ```SELECT @@max_heap_table_size```
 
@@ -184,3 +184,6 @@ show databases;
 create database SAMPLE;
 use SAMPLE;
 show tables;
+
+## 函数
+- 时间戳转日期字符串 select FROM_UNIXTIME(`dateTime`/1000,'%Y-%m-%d')

@@ -43,7 +43,7 @@ sudo certbot certonly --webroot -w /usr/share/nginx/html -d api.bnade.com
 ### 配置文件
 1. 由上面的步骤，我们看到配置文件放置在/etc/nginx/目录下:
 - 主要配置文件：/etc/nginx/nginx.conf
-- 扩展配置文件：/etc/nginx/conf.d/*.conf
+- 扩展配置文件：`/etc/nginx/conf.d/*.conf`
 
 ### nginx的权限问题(13: Permission denied)解决办法
 1. 修改配置文件/etc/nginx/nginx.conf
