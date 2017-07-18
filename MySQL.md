@@ -185,5 +185,10 @@ create database SAMPLE;
 use SAMPLE;
 show tables;
 
+mysql命令行执行sql文件
+1. 登录mysql命令行 mysql -u xxx -p
+2. 切换数据库 use xxx
+3. 运行脚本 source /home/xxx/xx.sql
+
 ## 函数
 - 时间戳转日期字符串 select FROM_UNIXTIME(`dateTime`/1000,'%Y-%m-%d')
