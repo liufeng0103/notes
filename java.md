@@ -2,6 +2,9 @@
 private final AtomicLong counter = new AtomicLong();
 counter.incrementAndGet()
 
+## 安装
+安装路径  
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-3.b12.el7_3.x86_64
 
 ## Quartz
 Java定时任务调度工具

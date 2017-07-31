@@ -3,6 +3,9 @@
 ## 安装
 CentOS直接通过yum install maven安装
 
+安装路径  
+/usr/share/maven
+
 配置文件路径 /etc/maven/settings.xml 设置阿里云镜像
 ```xml
 <mirror>
