@@ -36,6 +36,7 @@ Redis应用场景
 make
 make prefix=/usr/local/redis install 指定安装目录
 
+flushall 清空redis数据库
 del key 删除一个key  
 keys * 查看所有key  
 incr key 指定key的value+1
@@ -83,11 +84,11 @@ srandmember key
 sdiffstore key1 key2 key3
 sinterstore key1 key2 key3
 
-sorted-set
+有序集合sorted-set
 zadd key 70 zs 90 ww
 zadd key 100 zs
 zscore key zs
-zcard key
+zcard key 获取有序集合的成员数
 zrem key zs
 zrange key 0 -1
 zrange key 0 -1 withscores
@@ -109,7 +110,7 @@ exists my1
 get compamy
 rename key newkey
 expire key 1000
-ttl key
+ttl key 查看剩余生存时间
 type key
 
 Redis特性

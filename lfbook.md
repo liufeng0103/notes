@@ -50,3 +50,15 @@ Atom正则表达式替换
 
 
 [jquery ajax在跨域访问post请求的时候，ie9以下无效（包括ie9）](http://www.cnblogs.com/cxf520/p/5777119.html)
+
+# VSCODE
+Ctrl + ` 打开终端
+Shift + Alt + f 格式化
+
+# sqlite
+## sqlite类型
+NULL: 表示该值为NULL值
+INTEGER: 无符号整型值
+REAL: 浮点值
+TEXT: 文本字符串，存储使用的编码方式为UTF-8、UTF-16BE、UTF-16LE
+BLOB: 存储Blob数据，该类型数据和输入数据完全相同
