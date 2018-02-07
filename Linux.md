@@ -29,6 +29,11 @@ iptables -I INPUT -s 127.0.0.1 -p tcp --dport 8080 -j ACCEPT
 
 切换用户 su luis
 
+## 组
+查看组 groups
+添加组 groupadd docker
+添加用户到组 gpasswd -a ${USER} docker
+
 ### 用户添加sudo权限
 1. 使用root账户使用以下命令为sudoers添加写权限 chmod u+w /etc/sudoers
 2. 添加 <user> ALL=(ALL) ALL

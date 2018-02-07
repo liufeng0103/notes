@@ -34,9 +34,7 @@ VirtualBox桥接模式无法获取ip问题解决
 使用ifconfig发现可以查看到桥接网卡enp03s,但未分配ip
 使用命令ifup enp03s 后发现成功获取ip
 
-groups
-groupadd docker
-gpasswd -a ${USER} docker
+
 
 ## 网站优化
 - DNS优化

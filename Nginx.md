@@ -6,7 +6,7 @@
 
 平滑加载  
 sudo systemctl reload nginx  
-nginx -s reload
+sudo nginx -s reload
 
 配置文件 /etc/nginx
 
@@ -27,10 +27,12 @@ ImportError: 'pyOpenSSL' module missing required functionality. Try upgrading to
 解决：自己手动下载安装了新的pyOpenSSL rpm包
 2. sudo certbot --nginx提示超时，阿里云设置安全组 开放443端口
 
-直接使用下面命令下载安装整数
+直接使用下面命令下载安装证书
 sudo certbot certonly --webroot -w /usr/share/nginx/html -d api.bnade.com
 
-查看当前证书 certbot certificates
+查看当前证书 sudo certbot certificates
+更新证书 sudo certbot renew
+重启 sudo nginx -s reload
 
 ## Nginx
 ### 安装
