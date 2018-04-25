@@ -41,3 +41,11 @@ iptables -I INPUT -s 127.0.0.1 -p tcp --dport 8080 -j ACCEPT
 
 sudo service mysqld start
 sudo systemctl start mysqld.service
+
+## 磁盘
+查看目录大小
+du -h --max-depth=1
+du -h --max-depth=2 | sort -n
+
+清理journal日志
+journalctl --vacuum-size=500M
