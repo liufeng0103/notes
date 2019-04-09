@@ -129,3 +129,11 @@ sudo /usr/local/bin/redis-server /home/Luis/config/redis/redis.conf
 关闭redis：
 sudo /usr/local/bin/redis-cli shutdown
 
+
+## 磁盘
+查看目录大小
+du -h --max-depth=1
+du -h --max-depth=2 | sort -n
+
+清理journal日志
+journalctl --vacuum-size=500M

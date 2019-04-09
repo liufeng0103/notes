@@ -27,3 +27,7 @@ Lombok
 - [AngularJS官网](http://angularjs.org/) - 由于官网使用的google服务器，需要翻墙才能访问
 - [AngularJS ui-router (嵌套路由)](http://www.oschina.net/translate/angularjs-ui-router-nested-routes?print) - oschina翻译的一篇关于ui-router嵌套路由的使用
 - [AngularJS 教程](http://www.runoob.com/angularjs/angularjs-tutorial.html) - AngularJS基础教程
+
+
+打开windows的services
+在运行中输入services.msc
