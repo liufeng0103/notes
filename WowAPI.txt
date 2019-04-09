@@ -1,0 +1,18 @@
+
+NPC交互，需要EWT
+InteractUnit("target")
+
+获取物品link的字符串描述
+tostring(GetAuctionItemLink("list",3))
+
+获取服务器名
+/run print(GetRealmName())
+
+拍卖行查询
+/script QueryAuctionItems("丝绸", 0, 0, 0, nil, 3, false, nil)
+
+获取拍卖行物品数以及当前页物品数
+/run print(GetNumAuctionItems("list"))
+
+获取拍卖物品的信息
+/run print(GetAuctionItemInfo("list", 1))
