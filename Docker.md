@@ -3,7 +3,6 @@
 - [第一个docker化的java应用](http://www.imooc.com/learn/824)
 - [docker常用管理命令](http://seanlook.com/2014/10/31/docker-command-best-use-1/)
 - [MySQL 官方Docker镜像的使用](https://itbilu.com/linux/docker/EyP7QP86M.html)
-- [在windows10里使用docker](http://www.59m59s.com/blog/zai-windows10li-shi-yong-docker/)
 - [Docker学习笔记（容器篇）](http://www.jianshu.com/p/8b46e98e596c)
 
 ## 仓库
